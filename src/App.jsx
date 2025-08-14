@@ -31,6 +31,8 @@ import FoodForwarding from "./pages/food-feedback/FoodForwarding";
 import HealthCheck from "./pages/health-feedback/HealthCheck";
 import FeelingCheck from "./pages/health-feedback/FeelingCheck";
 import HealthForwarding from "./pages/health-feedback/HealthForwarding";
+//voice-research
+import VoiceOrder from "./pages/voice-research/VoiceOrder";
 
 export default function App() {
   return (
@@ -74,6 +76,7 @@ function MainLayout() {
     "/delivery-complaint": { step: 2, total: 2 },
     "/issue-forwarding": { step: 0, total: 0 },
     "/eating-choice": { step: 2, total: 2 },
+
     /*food-health-feedback*/
     "/food-check": { step: 1, total: 3 },
     "/food-satisfaction": { step: 2, total: 3 },
@@ -82,6 +85,9 @@ function MainLayout() {
     "/health-check": { step: 1, total: 3 },
     "/feeling-check": { step: 2, total: 3 },
     "/health-forwarding": { step: 3, total: 3 },
+
+    /*voice-research*/
+    "/voice-order": { step: 0, total: 0 },
   };
 
   const progress = progressMap[pathname] || { step: 0, total: 0 };
@@ -124,6 +130,8 @@ function MainLayout() {
           <Route path="/health-check" element={<HealthCheck />} />
           <Route path="/feeling-check" element={<FeelingCheck />} />
           <Route path="/health-forwarding" element={<HealthForwarding />} />
+          {/*voice-research*/}
+          <Route path="/voice-order" element={<VoiceOrder />} />
         </Routes>
       </main>
 
