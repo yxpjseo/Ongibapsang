@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from "react-router-dom";
 import styled from "styled-components"; 
-import TopBar from "./components/TopBar";
+import ProgressBar from "./components/ProgressBar";
 import BottomBar from "./components/BottomBar";
 
 //Home
@@ -89,7 +89,7 @@ function MainLayout() {
   return (
     <>
       {/* TopBar는 항상 app-container 밖 */}
-      <TopBar progress={progress} />
+      <ProgressBar progress={progress} />
 
       {/* 콘텐츠 */}
       <main className="app-container">

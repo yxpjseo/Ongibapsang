@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import styled from "styled-components";
 
-function TopBar({ progress }) {
+function ProgressBar({ progress }) {
   const show = !!progress?.total;
   const pct = useMemo(() => {
     if (!show) return 0;
@@ -24,7 +24,7 @@ function TopBar({ progress }) {
   );
 };
 
-export default TopBar;
+export default ProgressBar;
 
 /* ===== styles ===== */
 const Wrapper = styled.header`
